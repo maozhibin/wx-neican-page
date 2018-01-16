@@ -1,0 +1,58 @@
+/* pages/my/invites.wxss */
+.container{
+   display: block;
+}
+.invites-view{
+  width: 100%;
+  
+}
+
+.invites-view view{
+  width: 80%;
+  text-align: center;
+  margin: 40rpx auto;
+}
+
+.qrcode{
+  width: 240rpx;
+  height: 240rpx;
+}
+button {
+  width: 80%;
+  margin-bottom: 30rpx;
+}
+.separateView{
+  height: 30rpx;
+  width: 100%;
+  background: #f5f5f5;
+}
+
+.invite {
+  display: block;
+  float: left;
+  margin-top: 20rpx;
+}
+.invitelist {
+ clear: left;
+ line-height: 135rpx;
+ vertical-align: middle;
+  
+}
+.avatar {
+  display: block;
+  float: left;
+  width: 120rpx;
+  height: 120rpx;
+  padding: 15rpx 15rpx 15rpx 35rpx; 
+}
+
+.username {
+  float: left;
+  padding-left:30rpx;
+  width: 45%;
+}
+
+.invitetime{
+  float: left;
+  width: 25%;
+}

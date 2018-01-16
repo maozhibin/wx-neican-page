@@ -1,0 +1,14 @@
+<!--pages/my/upgrade.wxml-->
+<view class="container">
+    <images class="pic" src="{{imgUrl}}" />
+    <view>
+      <view class="privilege">升级成为VIP，你将享有更多特权：</view>
+      <view class="privilege">1.高端交友</view>
+      <view class="privilege">2.会员参加权限</view>
+      <view class="privilege">3.专属信息推送</view>
+      <view class="privilege">4.真人秘书服务</view>
+      <view class="privilege">5.全网帖子任意游览</view>
+      <view class="text-right">VIP入会费：￥198</view>
+      <button class="pay" type="primary">立即支付</button>
+    </view>
+</view>

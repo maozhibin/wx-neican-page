@@ -1,0 +1,73 @@
+//index.js
+//获取应用实例
+const app = getApp()
+
+Page({
+  data: {
+    twitterList: [],
+    _tab: 1,
+    voteList: [
+      { name: 'USA', value: '美国', percent: 60},
+      { name: 'CHN', value: '中国', percent: 20, checked: 'true' },
+      { name: 'BRA', value: '巴西', percent: 0 },
+      { name: 'JPN', value: '日本', percent: 0 },
+      { name: 'ENG', value: '英国', percent: 0 },
+      { name: 'TUR', value: '法国', percent: 0 },
+    ]
+  },
+  
+  onLoad: function () {
+    
+  },
+
+  tabselect:function(e){
+    this.setData({
+      _tab: e.target.dataset.num
+    })
+  },
+
+  getTwitterList: function () {
+      this.setData({
+        twitterList: [{
+          title: "金融",
+          tab: "finance",
+          count: 10,
+          list:[{
+
+          }]
+        }]
+      })
+  },
+
+  toDetailPage:function(e){
+    wx.navigateTo({
+      url: '../twitter/show/twitterDetail?id=' + e.target.dataset.id,
+    })
+  },
+
+  addTwitter: function () {
+    wx.navigateTo({
+      url: '../twitter/edit/addTwitter',
+    })
+  },
+  
+  toUser: function (e) {
+    wx.navigateTo({
+      url: '../my/info?uid=' + e.target.dataset.uid,
+    })
+  },
+
+  toSetting: function(e){
+    wx.navigateTo({
+      url: '../my/setting?uid=' + e.target.dataset.uid,
+    })
+  }, 
+  getUserInfo: function(e) {
+    console.log(e)
+    app.globalData.userInfo = e.detail.userInfo
+    this.setData({
+      userInfo: e.detail.userInfo,
+      hasUserInfo: true
+    })
+  }
+})

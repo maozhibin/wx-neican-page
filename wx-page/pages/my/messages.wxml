@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="msg-line"></view>
+  <view wx:for="{{news}}" wx:key="{{index}}">
+    <view class="msg-items msg-flex">
+      <view class="msg_lt">
+        <image src="{{item.userImg}}" />
+      </view>
+      <view class="msg_md">
+        <view class="msg_md-users">{{item.user}}</view>
+        <view class="msg_md-time">{{item.time}}</view>
+        <view class="msg_md-news">{{item.news}}</view>
+      </view>
+    </view>
+  </view>
+</view>

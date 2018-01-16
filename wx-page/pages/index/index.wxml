@@ -1,0 +1,149 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="tabs">
+    <view class="tab-label {{_tab==1?'current':''}}" data-code="Finance" data-num="1" bindtap="tabselect">金融</view>
+    <view class="tab-label {{_tab==2?'current':''}}" data-code="jobs" data-num="2" bindtap="tabselect">人才需求</view>
+    <view class="tab-label {{_tab==3?'current':''}}" data-code="paty" data-num="3" bindtap="tabselect">高端联谊</view>
+  </view>
+  <scroll-view class="page__bd" scroll-y="true">
+  <view class="banner">
+      <swiper indicator-dots="{{indicatorDots}}"  
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">  
+        <block wx:for="{{imgUrls}}">  
+          <swiper-item>   
+              <image src="{{item.url}}" class="slide-image" />  
+          </swiper-item>  
+        </block>  
+      </swiper>  
+</view>
+</scroll-view>
+    <view class="twitterList">
+      <view class="twitter" data-id="10021"  wx:for="{{msg}}" wx:key="{{index}}" wx:if="{{_tab==1 && item.tabnum==1}}">
+        <image class="twitter-avatar" bindtap="toUser" data-uid="{{item.uid}}" src="{{item.headImg}}"></image>
+        <view class="twitter-body">
+          <view class="body-top">
+            <view class="body-top-left">
+              <view class="nickName">{{item.userName}}</view>
+              <image class="twitter-jiang" src="../../images/icon/jiang.png"></image>
+              <view class="befor">{{item.time}}</view>
+            </view>
+            <view class="body-top-right">
+              <image class="twitter-icon" bindtap="toSetting" src="../../images/icon/share.png"></image>
+              <image class="twitter-icon" src="../../images/icon/star.png"></image>
+            </view>
+          </view>
+
+          <view class="twitter-title">{{item.title}}</view>
+          <view class="twitter-content">
+          <!--富文本显示 content -->
+          <rich-text>{{item.content}}</rich-text></view>
+          <view class="twitter-attr" wx:if="{{item.titleImg}}"><img src="{{item.titleImg}}"/></view>
+
+          <view class="bottom">
+            <view class="toDetail">
+              <text bindtap="toDetailPage" hover-class="toDetailHover" data-id="10015">查看原文</text>
+              <image class="reply-icon" src="../../images/icon/info.png"></image>
+            </view>
+
+            <view class="zan">
+              <image src="../../images/icon/zan.png"></image>
+              <view class="zan-user">{{item.zan}}</view>
+              <view class="reply-list" wx:for="{{item.reply}}" wx:key="{{index}}">
+                <text class="reply-user">{{item.replyUser}}： </text>
+                <text class="reply-content">{{item.replyContent}}</text>
+              </view>
+            </view>
+          </view>
+
+        </view>
+      </view>
+
+      <view class="twitter" data-id="15621" wx:for="{{msg}}" wx:key="{{index}}" wx:if="{{_tab==2 && item.tabnum==2}}">
+        <image class="twitter-avatar" bindtap="toUser" data-uid="{{item.uid}}" src="{{item.headImg}}"></image>
+        <view class="twitter-body">
+          <view class="body-top">
+            <view class="body-top-left">
+              <view class="nickName">{{item.userName}}</view>
+              <image class="twitter-jiang" src="../../images/icon/jiang.png"></image>
+              <view class="befor">{{item.time}}</view>
+            </view>
+            <view class="body-top-right">
+              <image class="twitter-icon" src="../../images/icon/share.png"></image>
+              <image class="twitter-icon" src="../../images/icon/star.png"></image>
+            </view>
+          </view>
+
+          <view class="twitter-title">{{item.title}}</view>
+          <view class="twitter-content2">
+            <radio-group class="radio-group" bindchange="radioChange">
+              <view class="radio" wx:for="{{voteList}}" wx:key="item">
+                <!-- <radio value="{{item.name}}" checked="{{item.checked}}" style="width: 50rpx; float: left;" /> -->
+                <view style="float:left;width: 450rpx;">
+                  <view style="float:left; padding-left: 50rpx;">{{item.value}}</view>
+                  <view style="float:left; background-color:green;height:15rpx; {{item.percent > 0 ? 'width:'+item.percent*3+'rpx' : 'width:0rpx'}}"></view>
+                  <view style="float:right;">{{item.percent}}%</view>
+                </view>
+              </view>
+            </radio-group>
+          </view>
+          <view class="bottom">
+            <view class="toDetail">
+              <text bindtap="toDetailPage" hover-class="toDetailHover" data-id="88954">查看原文</text>
+              <image class="reply-icon" src="../../images/icon/info.png"></image>
+            </view>
+
+            <view class="zan">
+              <image src="../../images/icon/zan.png"></image>
+              <view class="zan-user">Andy，李强，王强，Liu 等6人</view>
+              <view class="reply-list" wx:for="{{item.reply}}" wx:key="{{index}}">
+                <text class="reply-user">{{item.replyUser}}： </text>
+                <text class="reply-content">{{item.replyContent}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="twitter" data-id="10021"  wx:for="{{msg}}" wx:key="{{index}}" wx:if="{{_tab==3 && item.tabnum==3}}">
+        <image class="twitter-avatar" bindtap="toUser" data-uid="{{item.uid}}" src="{{item.headImg}}"></image>
+        <view class="twitter-body">
+          <view class="body-top">
+            <view class="body-top-left">
+              <view class="nickName">{{item.userName}}</view>
+              <image class="twitter-jiang" src="../../images/icon/jiang.png"></image>
+              <view class="befor">{{item.time}}</view>
+            </view>
+            <view class="body-top-right">
+              <image class="twitter-icon" bindtap="toSetting" src="../../images/icon/share.png"></image>
+              <image class="twitter-icon" src="../../images/icon/star.png"></image>
+            </view>
+          </view>
+
+          <view class="twitter-title">{{item.title}}</view>
+          <view class="twitter-content">
+          <!--富文本显示 content -->
+          <rich-text>{{item.content}}</rich-text></view>
+          <view class="twitter-attr" wx:if="{{item.titleImg}}"><img src="{{item.titleImg}}"/></view>
+
+          <view class="bottom">
+            <view class="toDetail">
+              <text bindtap="toDetailPage" hover-class="toDetailHover" data-id="10015">查看原文</text>
+              <image class="reply-icon" src="../../images/icon/info.png"></image>
+            </view>
+
+            <view class="zan">
+              <image src="../../images/icon/zan.png"></image>
+              <view class="zan-user">Andy，李强，王强，Liu 等6人</view>
+              <view class="reply-list">
+                <text class="reply-user">左晓明： </text>
+                <text class="reply-content">对有拥有正规牌照的企业是利好</text>
+              </view>
+            </view>
+          </view>
+
+        </view>
+      </view>
+     <view id="add-button">
+        <image class="twitter-icon" src="../../images/round_add.png" style="width:90rpx;height:90rpx" bindtap="addTwitter"></image>
+</view>
+</view>

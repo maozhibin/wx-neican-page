@@ -1,0 +1,196 @@
+/* pages/my/myTwitterDetail.wxss */
+.container{
+  padding-top: 0rpx;
+}
+
+.tabs {
+  height: 96rpx;
+  width: 100%;
+  background-color: #7B68EE;
+  text-align: center;
+}
+
+.tabs .tab-label{
+  font-size: 34rpx;
+  color: #f0f0f0;
+  padding: 30rpx 0;
+  float: left;
+  width: 33%;
+}
+
+
+.tabs .current{
+  font-size: 34rpx;
+  font-weight:bold;
+  color: #fff;
+  padding-bottom: 25rpx;
+  padding-top: 25rpx;
+}
+
+.banner{
+  background-color: #DEB887;
+  width: 100%;
+  height: 270rpx;
+}
+
+.twitter{
+  padding-bottom: 30rpx;
+}
+.twitter-avatar{
+  float:left;
+  width: 80rpx;
+  height: 80rpx;
+  padding: 10rpx 20rpx 0 0;
+}
+
+.twitter-body{
+  float:left;
+  width: 560rpx;
+  padding-bottom: 50rpx;
+}
+
+.body-top-left{
+  float:left;
+  width: 160rpx;
+  padding-top: 20rpx;
+}
+
+.nickName,.twitter-icon,.befor{
+  float:left;
+  color: #7B68EE;
+  font-size:28rpx;
+}
+
+.twitter-jiang{
+   float:left;
+    width: 40rpx;
+    height: 40rpx;
+    padding-left: 20rpx;
+}
+
+.nickName{
+  font-size: 32rpx;
+}
+
+.body-top{
+  float:block;
+}
+
+.body-top-right{
+  float: right;
+  width: 160rpx;
+  padding-right: 30rpx;
+  text-align: center;
+  height: 100%;
+}
+
+.twitter-icon{
+  float:left;
+  width: 50rpx;
+  height: 50rpx;
+  padding: 30rpx 0;
+  padding-left: 30rpx;
+}
+
+.twitter-title{
+  padding-top: 110rpx;
+  font-weight: bold;
+  font-size: 42rpx;
+}
+
+.twitter-content{
+  padding-top: 15rpx;
+  font-size: 36rpx;
+}
+
+.twitter-attr{
+    padding-top: 15rpx;
+    background-color: #A9A9A9;
+    height: 150rpx;
+}
+
+.toDetail{
+  float:left;
+  width: 100%;
+  padding-top: 15rpx;
+  color:#7B68EE;
+  font-size:36rpx;
+}
+
+.toDetail .option{
+  font-size:32rpx;
+  padding-left: 30rpx;
+}
+
+.reply-icon{
+  float:right;
+  width: 50rpx;
+  height: 50rpx;
+  padding-right: 30rpx;
+}
+
+.zan{
+  float:left;
+  padding-top: 20rpx;
+}
+
+.zan image{
+  float:left;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.zan .zan-user{
+  padding-left:30rpx;
+  color:#7B68EE;
+  font-size:32rpx;
+  padding-bottom: 40rpx;
+  border-bottom: 3rpx solid #d0d0d0;
+}
+
+.reply-list{
+  padding-top: 30rpx;
+  font-size:36rpx;
+}
+
+.reply-list .reply-user{
+    color:#7B68EE;
+    font-weight: bold;
+}
+
+.replyEdit {
+  position: fixed;
+  width: 100%;
+  padding: 10rpx 5%;
+  z-index: 99;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  background-color: #f5f5f5; 
+}
+.replyEdit .replyBtn{
+  width: 120rpx;
+  height: 60rpx;
+  font-size: 26rpx;
+}
+.replyEdit input {
+  border: 3rpx solid #999;
+}
+ .replyEdit>image{
+  height: 50rpx;
+  width: 50rpx;
+  margin: 10rpx 0 0 20rpx;
+} 
+.attachment {
+  margin-top :20rpx;
+  display: flex;
+  flex-direction: row;
+}
+.attachment .filetype {
+  width: 60rpx;
+  height: 60rpx;
+}
+.attachment .filename {
+  margin: 10rpx 0 0 20rpx;
+  font-size: 32rpx;
+}

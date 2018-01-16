@@ -1,0 +1,11 @@
+<!--pages/my/validsuccess.wxml-->
+<view class="container">
+    <image src="../../images/icon/yes.png"/>
+    <view class="user-tel">{{tel}}
+    </view>
+    <view>手机号验证成功</view>
+    <view>验证成功后，你能发布帖子，并将享有更高的帖子阅读权限。快来发个帖子体验下吧。手机号验证成功</view>
+    <button> 发帖 </button>
+    <button> 回到首页 </button>
+    
+</view>

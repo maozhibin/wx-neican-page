@@ -1,0 +1,54 @@
+<!--pages/collaboration/postcollaboration.wxml-->
+<!--pages/twitter/edit/addTwitter.wxml-->
+<view class="container">
+  <view class="add" wx:if="{{_tab==1 || _tab==2}}">
+    <view class="body">
+      <view class="title">
+        <input placeholder="请输入你想表达的，第一行默认为标题"></input>
+      </view>
+      <scroll-view>
+        <textarea class="content" maxlength="1000" auto-height="true" style="width: 640rpx; height: 300rpx;">
+        </textarea>
+      </scroll-view>
+    </view>
+
+    <view class="pushModel">
+      <text bindtap="cancel">返回</text>
+    </view>
+    <view class="separateView"></view>
+    <view class="selectModel" bindtap="selectType">
+      <image src="../../images/icon/label.png"></image>
+      <view class="op-name">谁可以看</view>
+      <view class="model">{{selectTypyModel}}</view>
+    </view>
+    <view class="selectModel" bindtap="selectReadRule">
+      <image src="../../images/icon/label.png"></image>
+      <view class="op-name">添加协作者</view>
+      <view class="model2" wx:if="{{readRule==null}}"><image src="../../images/add2.png" /></view>
+    </view>
+    <view class="selectModel" bindtap="selectReplyRule">
+      <image src="../../images/icon/label.png"></image>
+      <view class="op-name">是否可以回帖</view>
+      <view class="model" style="height: 60rpx;">
+        <switch checked bindchange="switch1Change" />
+      </view>
+    </view>
+  </view>
+  <view class="add" wx:if="{{_tab==3}}">
+    <view class="body">
+      <view class="title">
+        <input placeholder="请输入你想表达的，第一行默认为标题"></input>
+      </view>
+      <scroll-view>
+        <textarea class="content" maxlength="1000" auto-height="true" style="width: 640rpx; height: 300rpx;">
+        </textarea>
+      </scroll-view>
+    </view>
+    <view>
+        <image class="addfile" src="../../images/icon/selected/add.png" />
+    </view>
+  </view>
+  <view>
+  <button>发布</button>
+  </view>
+</view>

@@ -1,0 +1,52 @@
+<!--pages/my/myTwitterDetail.wxml-->
+<!--index.wxml-->
+<view class="container">
+  <view class="twitterList">
+        <view class="twitter-body">
+          <image class="twitter-avatar" bindtap="toUser" data-uid="{{twitter.uid}}" src="{{twitter.headImg}}"></image>
+          <view class="body-top">
+            <view class="body-top-left">
+              <view class="nickName">{{twitter.userName}}</view>
+              <image class="twitter-jiang" src="../../../images/icon/jiang.png"></image>
+              <view class="befor">{{twitter.time}}</view>
+            </view>
+            <view class="body-top-right">
+              <image class="twitter-icon" bindtap="toSetting" src="../../../images/icon/share.png"></image>
+              <image class="twitter-icon" src="../../../images/icon/star.png"></image>
+            </view>
+          </view>
+
+          <view class="twitter-title">{{twitter.title}}</view>
+          <view class="twitter-content">
+          <!--富文本显示 content -->
+          <text>{{twitter.content}}</text></view>
+          <view class="twitter-attr" wx:if="{{twitter.titleImg}}"><img src="{{twitter.titleImg}}"/></view>
+          <text>{{twitter.content}}</text>
+          <view class="attachment" >
+            <image class="filetype" src="{{twitter.filetype}}" />
+            <view class="filename" bindtap="toDownfile">{{twitter.filename}}</view>
+            </view>
+
+          <view class="bottom">
+            <image class="reply-icon" src="../../../images/icon/selected/info.png" bindtap="toReply"></image>
+            <image class="reply-icon" src="../../../images/icon/selected/zan.png" ></image>
+            <view class="zan">
+              <image src="../../../images/icon/zan.png"></image>
+              <view class="zan-user">{{twitter.zan}}</view>
+              <view class="reply-list" wx:for="{{twitter.reply}}" wx:key="{{index}}">
+                <text class="reply-user">{{item.replyUser}}： </text>
+                <text class="reply-content">{{item.replyContent}}</text>
+              </view>
+              </view>
+          </view>
+        </view>
+      </view>
+</view>
+
+<view class="replyEdit" style="display: {{display}}">
+            <input placeholder="请输入你的评论" placeholder-class="search-placeholder" focus="{{focus}}"/>
+            <image src="../../../images/file.png" />
+            <button type="mini" class="replyBtn">评论</button>
+
+</view>
+

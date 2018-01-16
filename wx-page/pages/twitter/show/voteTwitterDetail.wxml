@@ -1,0 +1,59 @@
+<!--pages/my/myTwitterDetail.wxml-->
+<!--index.wxml-->
+<view class="container">
+  <view class="twitterList">
+    <view class="twitter-body">
+      <image class="twitter-avatar" bindtap="toUser" data-uid="{{twitter.uid}}" src="{{twitter.headImg}}"></image>
+      <view class="body-top">
+        <view class="body-top-left">
+          <view class="nickName">{{twitter.userName}}</view>
+          <image class="twitter-jiang" src="../../../images/icon/jiang.png"></image>
+          <view class="befor">{{twitter.time}}</view>
+        </view>
+        <view class="body-top-right">
+          <image class="twitter-icon" bindtap="toSetting" src="../../../images/icon/share.png"></image>
+          <image class="twitter-icon" src="../../../images/icon/star.png"></image>
+        </view>
+      </view>
+
+      <view class="twitter-title">{{twitter.title}}</view>
+      <view class="twitter-content">
+        <radio-group class="radio-group" bindchange="radioChange">
+          <view class="radio" wx:for="{{twitter.voteList}}" wx:key="{{index}}">
+            <radio value="{{item.name}}" checked="{{item.checked}}" style="width: 50rpx; clear: left; float: left;" />
+            <view style="float:left;width: 450rpx;">
+              <view style="float:left; padding-left: 50rpx;">{{item.value}}</view>
+              <view style="float:left; background-color:green;height:15rpx; {{item.percent > 0 ? 'width:'+item.percent*3+'rpx' : 'width:0rpx'}}"></view>
+              <view style="float:right;">{{item.percent}}%</view>
+            </view>
+          </view>
+        </radio-group>
+      </view>
+      <view class="vote">
+        <button type="primary" class="voteBtn">投票</button>
+      </view>
+
+      <view class="bottom">
+        <image class="reply-icon" src="../../../images/icon/selected/info.png" bindtap="toReply"></image>
+        <image class="reply-icon" src="../../../images/icon/selected/zan.png"></image>
+        <view class="zan">
+          <image src="../../../images/icon/zan.png"></image>
+          <view class="zan-user">{{twitter.zan}}</view>
+          <image src="../../../images/icon/group.png"></image>
+          <view class="join-user">{{twitter.join}}</view>
+          <view class="reply-list" wx:for="{{twitter.reply}}" wx:key="{{index}}">
+            <text class="reply-user">{{item.replyUser}}： </text>
+            <text class="reply-content">{{item.replyContent}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="replyEdit" style="display: {{display}}">
+  <input placeholder="请输入你的评论" placeholder-class="search-placeholder" focus="{{focus}}" />
+  <image src="../../../images/file.png" />
+  <button type="mini" class="replyBtn">评论</button>
+
+</view>

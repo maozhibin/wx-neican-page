@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/my/login",
+    "pages/my/my",
+    "pages/index/index",
+    "pages/my/messages",
+    "pages/twitter/edit/addTwitter",
+    "pages/my/invites",
+    "pages/collaboration/postcollaboration",
+    "pages/my/upgrade",
+    "pages/my/validsuccess",
+    "pages/collaboration/collaboration",
+    "pages/my/info",
+    "pages/my/friends",
+    "pages/my/setting",
+    "pages/twitter/show/twitterSimpleList",
+    "pages/twitter/edit/editTwitter",
+    "pages/logs/logs",
+    "pages/logs/haha",
+    "pages/my/phonevalid",
+    "pages/twitter/show/viewfile",
+    "pages/twitter/show/twitterDetail",
+    "pages/twitter/show/voteTwitterDetail",
+    "pages/twitter/show/activeTwitterDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#6495ED",
+    "navigationBarBackgroundColor": "#f5f5f5",
+    "navigationBarTitleText": "内参社交圈",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "selectedIconPath": "images/icon/selected/home.png",
+        "iconPath": "images/icon/home.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/collaboration/collaboration",
+        "selectedIconPath": "images/icon/selected/msg.png",
+        "iconPath": "images/icon/msg.png",
+        "text": "协作"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "selectedIconPath": "images/icon/selected/user.png",
+        "iconPath": "images/icon/user.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

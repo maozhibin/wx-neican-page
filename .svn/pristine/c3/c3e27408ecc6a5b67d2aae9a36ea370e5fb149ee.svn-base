@@ -1,0 +1,68 @@
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 5rpx #2aa515;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+  font-size: 40rpx;
+}
+
+.myself {
+  padding: 40rpx 0 20rpx 40rpx;
+  font-size: 26rpx;
+  color: #d0d0d0;
+  width: 80%;
+}
+
+.user-option button{
+  height: 60rpx;
+  font-size: 28rpx;
+  margin-top: 20rpx; 
+}
+
+.separateView{
+  height: 30rpx;
+  width: 100%;
+  background: #f5f5f5;
+}
+
+.menu-list{
+    padding: 0 60rpx 0 30rpx ;
+    text-align:center;
+}
+
+.my-menu{
+  width: 650rpx;
+  height: 60rpx;
+  padding: 15rpx;
+  text-align: left;
+  background: url(https://cy-zone.top/zone/icon/arrow.png)  no-repeat right center;
+background-size:30rpx 30rpx;
+padding-right:10px;
+  border-bottom: 3rpx solid #f0f0f0;
+}
+
+.menu-text{
+  font-size: 36rpx;
+  padding: 0 0 10rpx 40rpx;
+}
+
+.my-menu-hover{
+  font-size: 50rpx;
+  color: #aaa;
+}
+
+.menu-icon{
+  width: 50rpx;
+  height: 50rpx;
+}

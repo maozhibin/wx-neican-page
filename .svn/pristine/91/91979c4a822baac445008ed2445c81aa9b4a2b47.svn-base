@@ -1,0 +1,114 @@
+// pages/my/login.js
+
+var app = getApp();
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    baseInfo: app.globalData.appInfo,
+    authList: ["获取用户信息", "获取地理位置", "获取联系人信息", "获取本地存储"]
+  },
+
+
+  //执行登录操作
+  toLogin: function () {
+    // 登录
+    var globalData = getApp().globalData;
+    var url = globalData.baseServerUrl + globalData.api.changeWxOpenid;
+    wx.login({
+      success: res => {
+        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        if (res.code) {
+          //发起网络请求
+          console.log('>>>>> 获取用户res.code:' + res.code);
+          wx.request({
+            url: url,
+            data: {
+              code: res.code
+            },
+            success: function (rd3_success) {
+              console.log('>>>>> 获取用户success:' + rd3_success);
+              wx.setStorageSync('rd3_success', rd3_success); //存入本地以备后续使用
+              getApp().getUserInfo();
+              wx.switchTab({
+                url: 'my',
+              })
+            }
+          })
+        } else {
+          console.log('>>>>> 获取用户登录态失败！请刷新' + res.errMsg);
+          wx.showModal({
+            title: '提示',
+            content: '获取用户登录态失败！请刷新',
+            success: function (res) {
+              if (res.confirm) {
+                wx.redirectTo({
+                  url: 'login',
+                })
+              } else if (res.cancel) {
+                console.log('用户点击取消')
+              }
+            }
+          })
+        }
+      }
+    })
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+  
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+  
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+  
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+  
+  }
+})

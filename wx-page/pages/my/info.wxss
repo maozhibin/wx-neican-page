@@ -1,0 +1,12 @@
+@import "my.wxss";
+
+.toTwitter, .addFriend{
+  width: 450rpx;
+  font-size: 36rpx;
+  margin-top: 50rpx;
+}
+
+.addFriend{
+  background-color:green; 
+}
+

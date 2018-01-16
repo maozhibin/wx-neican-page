@@ -1,0 +1,93 @@
+<!--pages/my/myTwitterDetail.wxml-->
+<!--index.wxml-->
+<view class="container">
+  <view class="banner">banner轮播</view>
+  <scroll-view>
+    <view class="twitterList">
+      <view class="twitter" data-id="10021">
+        <image class="twitter-avatar"  bindtap="toUser" data-uid="30001212" src="https://cy-zone.top/zone/images/mayun.jpg"></image>
+        <view class="twitter-body">
+          <view class="body-top">
+            <view class="body-top-left">
+              <view class="nickName">Andy</view>
+              <image class="twitter-jiang" src="https://cy-zone.top/zone/icon/jiang.png"></image>
+              <view class="befor">4分钟前</view>
+            </view>
+            <view class="body-top-right">
+              <image class="twitter-icon" src="https://cy-zone.top/zone/icon/share.png"></image>
+              <image class="twitter-icon" src="https://cy-zone.top/zone/icon/star.png"></image>
+            </view>
+          </view>
+
+          <view class="twitter-title">独家|现金贷遭严厉监管 68家P2P平台或受影响（名单）</view>
+          <view class="twitter-content">网贷之家不完全统计，目前有68家P2P网贷平台有现金贷业务，包括拍拍贷、信而富等平台，约占P2P网贷行业正常运营平台数量的3.44%（截至2017年10月底，P2P网贷行业正常运营平台数量为1975家。）详见下表1所示：</view>
+          <view class="twitter-attr"></view>
+          <view class="bottom">
+            <view class="toDetail">
+              <text class="option">编辑</text>
+              <text class="option">删除</text>
+              <image class="reply-icon" src="https://cy-zone.top/zone/icon/info.png"></image>
+            </view>
+
+            <view class="zan">
+              <image src="https://cy-zone.top/zone/icon/zan.png"></image>
+              <view class="zan-user">Andy，李强，王强，Liu 等6人</view>
+              <view class="reply-list">
+                <text class="reply-user">左晓明： </text>
+                <text class="reply-content">对有拥有正规牌照的企业是利好</text>
+              </view>
+            </view>
+          </view>
+
+        </view>
+      </view>
+
+      <view class="twitter" data-id="15621">
+        <image class="twitter-avatar"  bindtap="toUser" data-uid="30001212" src="https://cy-zone.top/zone/images/a3.jpg"></image>
+        <view class="twitter-body">
+          <view class="body-top">
+            <view class="body-top-left">
+              <view class="nickName">左晓峰</view>
+              <image class="twitter-jiang" src="https://cy-zone.top/zone/icon/jiang.png"></image>
+              <view class="befor">7分钟前</view>
+            </view>
+            <view class="body-top-right">
+              <image class="twitter-icon" src="https://cy-zone.top/zone/icon/share.png"></image>
+              <image class="twitter-icon" src="https://cy-zone.top/zone/icon/star.png"></image>
+            </view>
+          </view>
+
+          <view class="twitter-title">投票 | 你所在的平台受网贷对哪里的影响最大？</view>
+          <view class="twitter-content">
+            <radio-group class="radio-group" bindchange="radioChange">
+              <view class="radio" wx:for="{{voteList}}" wx:key="item">
+                  <radio value="{{item.name}}" checked="{{item.checked}}" style="width:20rpx;" />
+                <view style="float:left; padding-left: 50rpx;">{{item.value}}</view>
+                <view style="float:right">{{item.percent}}%</view>
+                <view style="background-color:green;height:15rpx; {{item.percent > 0 ? 'width:'+item.percent+'%' : 'width:0rpx'}}"></view>
+              </view>
+            </radio-group>
+          </view>
+          <view class="twitter-attr"></view>
+          <view class="bottom">
+            <view class="toDetail">
+              <text class="option">编辑</text>
+              <text class="option">删除</text>
+              <image class="reply-icon" src="https://cy-zone.top/zone/icon/info.png"></image>
+            </view>
+
+            <view class="zan">
+              <image src="https://cy-zone.top/zone/icon/zan.png"></image>
+              <view class="zan-user">Andy，李强，王强，Liu 等6人</view>
+              <view class="reply-list">
+                <text class="reply-user">左晓明： </text>
+                <text class="reply-content">对有拥有正规牌照的企业是利好</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+</view>

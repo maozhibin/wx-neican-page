@@ -1,0 +1,185 @@
+/**index.wxss**/
+
+.container {
+  padding-top: 0rpx;
+}
+
+.tabs {
+  height: 96rpx;
+  width: 100%;
+  background-color: #7b68ee;
+  text-align: center;
+}
+
+.tabs .tab-label {
+  font-size: 34rpx;
+  color: #f0f0f0;
+  padding: 30rpx 0;
+  float: left;
+  width: 33%;
+}
+
+.tabs .current {
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #fff;
+  padding-bottom: 25rpx;
+  padding-top: 25rpx;
+  border-bottom: 5rpx solid #fff;
+}
+
+.banner {
+  background-color: #deb887;
+  position: relative;
+  width: 100%;
+  height: 270rpx;
+}
+
+.post {
+  padding-bottom: 30rpx;
+}
+
+.post-avatar {
+  float: left;
+  width: 100rpx;
+  height: 100rpx;
+  padding: 30rpx 20rpx 0 0;
+}
+
+.post-body {
+  float: left;
+  width: 600rpx;
+  padding-bottom: 50rpx;
+  border-bottom: 3rpx solid #d0d0d0;
+}
+
+.body-top-left {
+  float: left;
+  width: 90%;
+  padding-top: 20rpx;
+}
+
+.body-top-left .post-info .befor {
+  float: left;
+  color: #7b68ee;
+  font-size: 28rpx;
+}
+
+.body-top-left .post-info .right {
+  float: right;
+  color: #7b68ee;
+  font-size: 28rpx;
+}
+
+
+.nickName {
+  color: #7b68ee;
+  font-size: 32rpx;
+}
+
+.nickName:after{
+  content:"";
+  height:0;
+  line-height:0;
+  display:block;
+  visibility:hidden;
+  clear:both;
+}
+
+.body-top {
+  float: block;
+}
+
+.body-top-right {
+  float: right;
+  width: 160rpx;
+  padding-right: 30rpx;
+  text-align: center;
+  height: 100%;
+}
+
+.post-title {
+  padding-top: 110rpx;
+  font-weight: bold;
+  font-size: 42rpx;
+}
+.post-content {
+   padding-top: 15rpx;
+   font-size: 36rpx;
+}
+.twitter-attr{
+    padding-top: 15rpx;
+    background-color: #A9A9A9;
+    height: 150rpx;
+}
+
+.toDetail {
+  float: left;
+  width: 100%;
+  padding-top: 15rpx;
+  color: #7b68ee;
+  font-size: 36rpx;
+}
+
+.toDetailHover {
+  color: #c0c0c0;
+}
+
+.reply-icon {
+  float: right;
+  width: 60rpx;
+  height: 60rpx;
+  padding-right: 30rpx;
+}
+
+.team{
+  float: left;
+  padding-top: 20rpx;
+}
+
+.team image {
+  float: left;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.team .team-user {
+  padding-left: 40rpx;
+  color: #7b68ee;
+  font-size: 32rpx;
+}
+.team .toDetail {
+  float: left;
+  color: #7b68ee;
+  font-size: 32rpx;
+}
+
+.reply-list {
+  padding-top: 30rpx;
+  font-size: 36rpx;
+}
+
+.reply-list .reply-user {
+  color: #7b68ee;
+  font-weight: bold;
+}
+
+.radio {
+  width: 90%;
+  height: 55rpx;
+  display: block;
+}
+
+#add-button {
+  position: fixed;
+  bottom: 50rpx;
+  right: 30rpx;
+}
+
+.post-icon{
+  float:left;
+  width: 40rpx;
+  height: 40rpx;
+  padding: 30rpx 0;
+  padding-left: 30rpx;
+}

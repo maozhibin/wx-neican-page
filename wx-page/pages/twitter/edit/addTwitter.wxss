@@ -1,0 +1,128 @@
+/* pages/twitter/edit/addTwitter.wxss */
+
+.container {
+  padding-top: 0rpx;
+  font-size: 32rpx;
+}
+
+.tabs {
+  height: 96rpx;
+  width: 100%;
+  background-color: #7b68ee;
+  text-align: center;
+}
+
+.tabs .tab-label {
+  font-size: 34rpx;
+  color: #f0f0f0;
+  padding: 30rpx 0;
+  float: left;
+  width: 33%;
+}
+
+.tabs .current {
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #fff;
+  padding-bottom: 25rpx;
+  padding-top: 25rpx;
+  border-bottom: 3rpx solid #fff;
+}
+
+.body {
+  width: 650rpx;
+  height: 350rpx;
+  border: 1rpx solid #d0d0d0;
+  margin-top: 30rpx;
+}
+
+.title {
+  width: 90%;
+  padding: 30rpx 20rpx 0 20rpx;
+  border-bottom: 1rpx solid #d0d0d0;
+}
+
+.content {
+  padding: 30rpx 20rpx 0 20rpx;
+}
+
+.separateView {
+  height: 50rpx;
+  width: 100%;
+  background: #f5f5f5;
+  margin-top: 50rpx;
+}
+
+.selectModel {
+  width: 90%;
+  height: 90rpx;
+  padding: 20rpx 25rpx;
+  text-align: center;
+  background: url(https://pay.188jielan.net/zone/icon/arrow.png) no-repeat right center;
+  background-size: 30rpx 30rpx;
+  font-size: 36rpx;
+  color: #030303;
+  border-bottom: 5rpx solid #fff;
+}
+
+.selectModel image {
+  width: 50rpx;
+  height: 50rpx;
+  float: left;
+  padding-top: 20rpx;
+}
+
+.op-name {
+  float: left;
+  padding-left: 40rpx;
+  padding-top: 15rpx;
+}
+
+.model {
+  float: right;
+  padding-right: 10rpx;
+  padding-top: 15rpx;
+  color: #d0d0d0;
+}
+
+.pushModel text {
+  float: right;
+  height: 70rpx;
+  color: #7b68ee;
+  padding-top: 50rpx;
+  padding-right: 30rpx;
+}
+
+button {
+  margin: 5%;
+  width: 460rpx;
+}
+
+.addfile {
+  margin-top: 20rpx;
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.selectItem {
+  margin-top: 80rpx;
+  display: flex;
+  flex-direction: row;
+}
+.selectItem image{
+  width: 45rpx;
+  height: 45rpx;
+}
+.selectItem .left {
+  margin-left: 40rpx;
+}
+.selectItem .right {
+   margin-left: 340rpx;
+}
+.addItem {
+  width: 100%;
+  height: 70rpx;
+  color: #7b68ee;
+  padding-top: 80rpx;
+  text-align: center;
+}

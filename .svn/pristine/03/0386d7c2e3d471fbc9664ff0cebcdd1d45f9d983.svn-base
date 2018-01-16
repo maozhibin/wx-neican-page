@@ -1,0 +1,22 @@
+<!--pages/my/login.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <image src="{{baseInfo.logo}}"  class="userinfo-avatar"></image>
+    <text class="userinfo-nickname">{{baseInfo.name}}</text>
+    <view class="myself">
+        <rich-text class="myself-text">{{baseInfo.myself}}</rich-text>
+    </view>
+  </view>
+  <view class="separateView"></view>
+  <view class="auth-list">
+    <block wx:for="{{authList}}" wx:for-item="item" wx:key="index">
+      <view class="auth-detail">
+        <image src="../../images/icon/add.png" class="auth-icon" style="width:20rpx;height:20rpx;"></image>
+        <text>{{item}}</text>
+      </view>
+    </block>
+  </view>
+  <view>
+      <button  class="option-button" bindtap="toLogin">点击授权登录</button>
+  </view>
+</view>

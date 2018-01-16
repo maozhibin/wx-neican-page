@@ -1,0 +1,9 @@
+<!--pages/twitter/edit/editTwitter.wxml-->
+<view class="container">
+  <view class="tabs">
+    <view class="tab-label {{_tab==1?'current':''}}" data-code="Finance" data-num="1" bindtap="tabselect">普通贴</view>
+    <view class="tab-label {{_tab==2?'current':''}}" data-code="jobs" data-num="2" bindtap="tabselect">活动贴</view>
+    <view class="tab-label {{_tab==3?'current':''}}" data-code="paty" data-num="3" bindtap="tabselect">投票贴</view>
+  </view>
+  
+</view>

@@ -1,0 +1,63 @@
+//app.js
+App({
+  onLaunch: function () {
+    // 展示本地存储能力
+    var logs = wx.getStorageSync('logs') || []
+    logs.unshift(Date.now())
+    wx.setStorageSync('logs', logs)
+
+    var that = this;
+    wx.checkSession({
+      success: function () {
+        //session 未过期，并且在本生命周期一直有效
+        that.getUserInfo();
+      },
+      fail: function () {
+        //登录态过期
+        wx.redirectTo({
+          url: 'pages/my/login',
+        })
+      }
+    })
+  },
+  
+  getUserInfo: function () {
+    // 获取用户信息
+    wx.getSetting({
+      success: res => {
+        if (res.authSetting['scope.userInfo']) {
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
+          wx.getUserInfo({
+            success: res => {
+              // 可以将 res 发送给后台解码出 unionId
+              this.globalData.userInfo = res.userInfo
+
+              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+              // 所以此处加入 callback 以防止这种情况
+              if (this.userInfoReadyCallback) {
+                this.userInfoReadyCallback(res)
+              }
+
+            },
+            fail: res => {
+              wx.showModal({
+                title: '消息提示',
+                content: '获取用户信息失败，请重试',
+              })
+            }
+          })
+        }
+      }
+    })
+  },
+  
+  globalData: {
+    userInfo: null,
+    baseServerUrl: 'https://pay.188jielan.net/neican/',
+    appInfo: { //小程序概要信息
+      logo: 'https://pay.188jielan.net/zone/images/mayun.jpg',
+      name: "村云科技-内参圈",
+      myself: "国内最先进的内参科技创新论坛"
+    }
+  }
+})

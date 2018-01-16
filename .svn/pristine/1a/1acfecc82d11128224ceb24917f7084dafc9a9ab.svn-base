@@ -1,0 +1,51 @@
+<!--pages/twitter/edit/addTwitter.wxml-->
+<view class="container">
+  <view class="tabs">
+    <view class="tab-label {{_tab==1?'current':''}}" data-code="Finance" data-num="1" bindtap="tabselect">普通贴</view>
+    <view class="tab-label {{_tab==2?'current':''}}" data-code="jobs" data-num="2" bindtap="tabselect">活动贴</view>
+    <view class="tab-label {{_tab==3?'current':''}}" data-code="paty" data-num="3" bindtap="tabselect">投票贴</view>
+  </view>
+  
+  <view class="add" wx:if="{{_tab==1 || _tab==2}}">
+    <view class="body">
+      <view class="title">
+        <input placeholder="请输入你想表达的，第一行默认为标题"></input>
+      </view>
+      <scroll-view>
+        <textarea class="content" maxlength="1000" auto-height="true" style="width: 640rpx; height: 300rpx;">
+        </textarea>
+      </scroll-view>
+    </view>
+
+    <view class="pushModel">
+      <text bindtap="pushTwitter">发布</text>
+      <text bindtap="cancel">返回</text>
+    </view>
+    <view class="separateView"></view>
+    <view class="selectModel" bindtap="selectType">
+      <image src="../../../images/icon/label.png"></image>
+      <view class="op-name">发布的板块</view>
+      <view class="model">{{selectTypyModel}}</view>
+    </view>
+    <view class="selectModel" bindtap="selectReadRule">
+      <image src="../../../images/icon/label.png"></image>
+      <view class="op-name">谁可以看</view>
+      <view class="model">{{selectReadRule}}</view>
+    </view>
+    <view class="selectModel" bindtap="selectReplyRule">
+      <image src="../../../images/icon/label.png"></image>
+      <view class="op-name">是否可以回帖</view>
+      <view class="model" style="height: 60rpx;">
+        <switch checked bindchange="switch1Change" />
+      </view>
+
+      <view class="selectModel" bindtap="selectReplyRule" wx:if="{{_tab==2}}">
+      <map id="map" longitude="120.18691" latitude="30.234987" scale="14" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" show-location style="width:600rpx;height: 240rpx; padding-top: 20rpx;">
+</map>
+       </view>
+    </view>
+  </view>
+  <view class="add" wx:if="{{_tab==3}}">
+    投票
+  </view>
+</view>

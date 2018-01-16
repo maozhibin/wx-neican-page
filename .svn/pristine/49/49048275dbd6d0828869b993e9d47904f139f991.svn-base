@@ -1,0 +1,2 @@
+/* pages/twitter/edit/editTwitter.wxss */
+@import "addTwitter.wxss";

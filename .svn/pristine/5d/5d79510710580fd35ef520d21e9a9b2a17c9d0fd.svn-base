@@ -1,0 +1,13 @@
+<!--pages/my/friends.wxml-->
+<view class="container">
+    <block wx:for="{{friends}}" wx:key="key" wx:for-item="item">
+        <view class="fi" data-uid="{{item.uid}}" bindtap="showUser">
+            <radio value="{{item.uid}}"></radio>
+            <image src="{{item.avatarUrl}}" class="avatar"></image>
+            <view class="right">
+              <view class="nickName">{{item.nickName}}</view>
+              <view class="addDate">{{item.addDate}}</view>
+            </view>
+        </view>
+    </block>
+</view>

@@ -1,0 +1,9 @@
+<!--pages/my/phonevalid.wxml-->
+<view class="container">
+ <input class="input-tel" placeholder="输入手机号" focus="{{focus}}" />
+  <view class="input-valid">
+          <input placeholder="输入验证码" focus="{{focus}}" />
+          <view class="get-valid">获取验证码</view>
+  </view>
+  <button type="primary"  bindtap='toValid'>验证</button>
+</view>

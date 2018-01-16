@@ -1,0 +1,22 @@
+<!--pages/my/myTwitterSimpleList.wxml-->
+<view class="container">
+  <scroll-view>
+    <block wx:for="{{twitterList}}" wx:key="{{index}}">
+      <view class="twitterList" data-id="{{item.id}}" bindtap="onTwitterClick">
+        <image src="{{item.icon}}" class="twitterListIcon" />
+        <view class="twitterListTitle">{{item.title}}</view>
+        <view class="twitterListButtom">
+          <view class="reply">
+            <image src="../../../images/icon/info.png" style="width:30rpx;height:30rpx;" />{{item.replyCount}}
+          </view>
+          <view class="zan">
+            <image src="../../../images/icon/zan.png" style="width:30rpx;height:30rpx;" />{{item.zanCount}}</view>
+        </view>
+        <view class="edit" bindtap="editTwitter" data-model="edit" data-uid="10212"  data-id="1020000">编辑</view>
+      </view>
+    </block>
+    <view class="backButtonView">
+      <button class="backButton" bindtap='back'>返回</button>
+    </view>
+  </scroll-view>
+</view>

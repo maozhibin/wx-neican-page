@@ -1,0 +1,12 @@
+/* pages/twitter/show/viewfile.wxss */
+
+.container {
+  margin: 0 40rpx;
+}
+.title {
+  font-size: 50rpx;
+  font-weight:600;
+}
+.article {
+  padding-top: 30rpx;
+}

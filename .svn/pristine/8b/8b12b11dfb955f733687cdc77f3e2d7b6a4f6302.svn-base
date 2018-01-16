@@ -1,0 +1,68 @@
+/* pages/my/myTwitterSimpleList.wxss */
+.edit-menu{
+  width: 100%;
+  padding: 20rpx 40rpx;
+}
+
+.edit-menu .edit,.add{
+  float:right;
+   font-size: 32rpx;
+   color: #008B8B;
+   padding-right:30rpx; 
+}
+
+
+.twitterList{
+  width: 90%;
+  height:  150rpx;
+  margin: 30rpx 15rpx; 
+  text-align: left;
+  background: url(https://cy-zone.top/zone/icon/arrow.png)  no-repeat right center;
+background-size:30rpx 30rpx;
+padding-right:10px;
+}
+
+.twitterListIcon{
+  width: 120rpx;
+  height: 120rpx;
+  float: left;
+  padding: 10rpx 0 10rpx 30rpx;
+}
+
+.twitterListTitle{
+  float: left;
+  width: 400rpx;
+  padding: 10rpx 0 10rpx 40rpx;
+}
+
+.twitterListButtom{
+  widows: 100%;
+  text-align: conter;
+  float:block;
+  border-bottom: 3rpx solid #f0f0f0;
+  margin-left: 200rpx;
+  font-size: 30rpx;
+  color:#aaa;
+}
+
+.twitterListButtom .reply{
+   float: left;
+   padding-left:190rpx;
+}
+
+.twitterListButtom .zan{
+   float: left;
+   padding-left:50rpx;
+}
+
+.backButtonView{
+  padding-top: 50rpx;
+}
+
+.backButton{
+  width: 80%;
+  height: 80rpx;
+  font-size: 35rpx;
+  padding: 5rpx;
+  text-align: center;
+}

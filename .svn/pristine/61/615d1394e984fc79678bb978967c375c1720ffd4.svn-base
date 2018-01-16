@@ -1,0 +1,5 @@
+<!--pages/my/setting.wxml-->
+<button bindtap='auth'>点我授权</button>
+<button bindtap='login'>点我登录</button>
+<button bindtap='getLocation'>获取地址</button>
+<button bindtap='setting'>查看授权设置</button>

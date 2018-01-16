@@ -1,0 +1,54 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/my/my",
+    "pages/my/info",
+    "pages/my/friends",
+    "pages/my/invites",
+    "pages/my/setting",
+    "pages/my/login",
+    "pages/twitter/show/twitterSimpleList",
+    "pages/twitter/show/twitterDetail",
+    "pages/twitter/edit/editTwitter",
+    "pages/twitter/edit/addTwitter",
+    "pages/logs/logs",
+    "pages/logs/haha"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "backgroundColor": "#B22222",
+    "navigationBarBackgroundColor": "#f5f5f5",
+    "navigationBarTitleText": "内参社交圈",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh" : true,
+    "onReachBottomDistance" : 50
+  },
+
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "selectedIconPath": "images/icon/selected/home.png",
+        "iconPath": "images/icon/home.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "selectedIconPath": "images/icon/selected/msg.png",
+        "iconPath": "images/icon/msg.png",
+        "text": "协作"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "selectedIconPath": "images/icon/selected/user.png",
+        "iconPath": "images/icon/user.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

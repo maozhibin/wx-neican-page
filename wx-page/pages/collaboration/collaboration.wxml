@@ -1,0 +1,46 @@
+<view class="container">
+    <view class="collist" wx:for="{{msg}}" wx:key="{{index}}">
+       <view class="post" data-id="{{item.id}}">
+        <image class="post-avatar" bindtap="toUser" data-uid="{{item.uid}}" src="{{item.headImg}}"></image>
+        <view class="post-body">
+          <view class="body-top">
+            <view class="body-top-left">
+              <view class="nickName">{{item.postname}}</view>
+              <view class="post-info">
+                  <view class="befor">{{item.time}}</view>
+                  <view class="right">{{item.readright}}</view>
+              </view>
+            </view>
+          </view>
+          <view class="post-title">{{item.title}}</view>
+          <view class="post-content">
+          <!--富文本显示 content -->
+          <rich-text>{{item.context}}</rich-text>
+          </view>
+          <view class="team">
+              <image src="../../images/edit.png"></image>
+              <view class="team-user">{{item.teamuser}}</view>
+              <text bindtap="toDetailPage" hover-class="toDetailHover" data-id="10015" class="toDetail">查看原文</text>
+          </view>
+        </view>
+       </view>
+
+       <view class="post" data-id="10021" wx:if="{{_tab==1}}">
+        <image class="post-avatar" bindtap="toUser" data-uid="30001212" src="http://img2.3lian.com/2014/gif/10/9/27.jpg"></image>
+        <view class="post-body">
+          <view class="body-top">
+            <view class="body-top-left">
+              <view class="nickName">{{item.postname}}</view>
+              <view class="post-info">
+                  <view class="befor">{{item.time}}</view>
+                  <view class="right">{{item.readright}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+       </view>
+      <view id="add-button">
+        <image class="post-icon" src="../../images/round_add.png" style="width:90rpx;height:90rpx" bindtap="addCollaboration"></image>
+      </view>
+    </view>
+</view>

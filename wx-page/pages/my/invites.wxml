@@ -1,0 +1,21 @@
+<!--pages/my/invites.wxml-->
+<view class="container">
+  <view class="invites-view">
+      <view>{{userInfo.nickName}}</view>
+      <view>
+        <image class="qrcode" src="{{qrcodeUrl}}"></image>
+      </view>
+      <view>我的邀请二维码</view>
+      <view>加入内参圈，最有价值的信息，结交最好玩的朋友</view>
+      <!-- <button bindtap="toSaveImg" data-scr="{{qrcodeUrl}}">保存图片</button> -->
+  </view>
+  <view class="separateView"></view>
+  <view class="invite">我的邀请记录</view>
+  <view class="invitelist" wx:for="{{invitelist}}" wx:key="{{index}}">
+      <view>
+          <image class="avatar" src="{{item.userAvatar}}" />
+          <view class="username">{{item.nickName}}</view>
+          <!-- <view class="invitetime">{{item.invitetime}}</view> -->
+      </view>
+  </view>
+</view>

@@ -1,0 +1,69 @@
+<!--pages/twitter/edit/addTwitter.wxml-->
+<view class="container">
+  <view class="tabs">
+    <view class="tab-label {{_tab==1?'current':''}}" data-code="Finance" data-num="1" bindtap="tabselect">普通贴</view>
+    <view class="tab-label {{_tab==2?'current':''}}" data-code="jobs" data-num="2" bindtap="tabselect">活动贴</view>
+    <view class="tab-label {{_tab==3?'current':''}}" data-code="paty" data-num="3" bindtap="tabselect">投票贴</view>
+  </view>
+
+  <view class="add" wx:if="{{_tab==1 || _tab==2}}">
+    <view class="body">
+      <view class="title">
+        <input placeholder="请输入你想表达的，第一行默认为标题"></input>
+      </view>
+      <scroll-view>
+        <textarea class="content" maxlength="1000" auto-height="true" style="width: 640rpx; height: 300rpx;">
+        </textarea>
+      </scroll-view>
+    </view>
+    <view class="pushModel">
+      <image class="addfile" src="../../../images/add.png" />
+      <text bindtap="cancel">返回</text>
+    </view>
+  </view>
+  <view class="add" wx:if="{{_tab==3}}">
+    <view class="body">
+      <view class="title">
+        <input placeholder="请输入你想表达的，第一行默认为标题"></input>
+      </view>
+      <scroll-view>
+        <textarea class="content" maxlength="1000" auto-height="true" style="width: 640rpx; height: 300rpx;">
+        </textarea>
+      </scroll-view>
+    </view>
+    <view class="pushModel">
+      <image class="addfile" src="../../../images/add.png" />
+      <text bindtap="cancel">返回</text>
+    </view>
+    <view class="selectItem">
+      <image src="../../../images/point.png" />
+      <text class="left">投票项1</text>
+      <text class="right">删除</text>
+    </view>
+    <view class="addItem" bindtap='addItem'>增加投票项</view>
+    <modal hidden="{{hiddenmodalput}}" title="请输入投票选项" confirm-text="提交" cancel-text="取消" bindcancel="cancel1" bindconfirm="confirm">
+      <input type='text' placeholder="请输入内容" auto-focus/>
+    </modal>
+  </view>
+  <view class="separateView"></view>
+  <view class="selectModel" bindtap="selectType">
+    <image src="../../../images/icon/label.png"></image>
+    <view class="op-name">发布的板块</view>
+    <view class="model">{{selectTypyModel}}</view>
+  </view>
+  <view class="selectModel" bindtap="selectReadRule">
+    <image src="../../../images/icon/label.png"></image>
+    <view class="op-name">谁可以看</view>
+    <view class="model">{{selectReadRule}}</view>
+  </view>
+  <view class="selectModel" bindtap="selectReplyRule">
+    <image src="../../../images/icon/label.png"></image>
+    <view class="op-name">是否可以回帖</view>
+    <view class="model" style="height: 60rpx;">
+      <switch checked bindchange="switch1Change" />
+    </view>
+  </view>
+  <view>
+    <button>发布</button>
+  </view>
+</view>
