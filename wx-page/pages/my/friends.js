@@ -1,41 +1,61 @@
 // pages/my/friends.js
+var app = getApp();
+var globalData = getApp().globalData;
+var url = globalData.baseServerUrl;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      friends:[{
-        uid:12154512,
-        addDate: "2017-12-11 21:25",
-        avatarUrl: "http://img2.3lian.com/2014/gif/10/9/27.jpg",
-        nickName : "小马哥"
-      },
-        {
-          uid: 12154532,
-          addDate: "2017-12-14 22:25",
-          avatarUrl: "http://img2.3lian.com/2014/gif/10/9/29.jpg",
-          nickName: "哈哈哈"
-        },
-         {
-        uid: 12154512,
-        addDate: "2017-12-11 21:25",
-        avatarUrl: "http://img2.3lian.com/2014/gif/10/9/28.jpg",
-        nickName: "Andy"
-      }]
+      friends:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that = this;
+    this.setData({
+      userInfo: app.globalData.userInfo
+    })
+    wx.request({
+      url: url + "/user/friendList?uid=" + app.globalData.userInfo.uid,
+      method: 'POST',
+      data: {},
+      success: function (res) {
+        console.log(res.data.object)
+        that.setData({
+          friends: res.data.object.list,
+        })
+        // app.globalData.userInfo = userInfo.data.object,
+        //   wx.switchTab({
+        //     url: 'my',
+        //   })
+        // wx.setStorageSync('rd3_success', userInfo.data.object); //存入本地以备后续使用
+      }
+    })
   },
 
   showUser:function(e){
-    wx.navigateTo({
-      url: 'info?uid=' + e.target.dataset.uid,
+    wx.request({
+      url: url + "/user/info?uid=" + e.currentTarget.dataset.uid,
+      method: 'POST',
+      data: {},
+      success: function (userInfo) {
+        var user = userInfo.data.object;
+        wx.navigateTo({
+          url: 'info?nickName=' + user.nickName + '&userAvatar=' + user.userAvatar + '&userSign=' + user.userSign,
+        })
+        // app.globalData.userInfo = userInfo.data.object,
+        //   wx.switchTab({
+        //     url: 'my',
+        //   })
+        // wx.setStorageSync('rd3_success', userInfo.data.object); //存入本地以备后续使用
+      }
     })
+
+    
   },
 
   /**

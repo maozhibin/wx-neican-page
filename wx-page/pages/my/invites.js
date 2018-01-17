@@ -61,13 +61,13 @@ Page({
     var url = globalData.baseServerUrl;
     
     wx.request({
-      url: url + "/user/friendList?uid=" + app.globalData.userInfo.uid,
+      url: url + "/user/findMyInvite?uid=" + app.globalData.userInfo.uid,
       method: 'POST',
       data: {},
       success: function (res) {
-        console.log(res.data.object.list)
+        console.log(res.data.object)
         that.setData({
-          invitelist: res.data.object.list,
+          invitelist: res.data.object,
         })
         // app.globalData.userInfo = userInfo.data.object,
         //   wx.switchTab({

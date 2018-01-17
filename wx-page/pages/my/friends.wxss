@@ -30,7 +30,13 @@
 .addDate{
   width: 400rpx;
 }
-
+.avatar {
+  display: block;
+  float: left;
+  width: 120rpx;
+  height: 120rpx;
+  padding: 15rpx 15rpx 15rpx 35rpx; 
+}
 .addDate{
   width: 80%;
 }

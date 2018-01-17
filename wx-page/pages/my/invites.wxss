@@ -50,9 +50,12 @@ button {
   float: left;
   padding-left:30rpx;
   width: 45%;
+  font-size:100%;
 }
 
 .invitetime{
   float: left;
   width: 25%;
+  height: 25%;
+  font-size:50%;
 }

@@ -64,7 +64,7 @@ Page({
   },
 
   toMyTwitter: function (options) {
-    console.info('toMyTwitter click >>>');
+    // console.info('toMyTwitter click >>>');
     wx.navigateTo({
       url: '../twitter/show/twitterSimpleList',
     });

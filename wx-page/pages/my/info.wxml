@@ -1,16 +1,17 @@
 <!--pages/my/info.wxml-->
 <view class="container">
   <view class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <image class="userinfo-avatar" src="{{userInfo.userAvatar}}" background-size="cover"></image>
+      <text class="userinfo-nickname">昵称：{{userInfo.nickName}}</text>
       <view class="myself">
-        <rich-text class="myself-text">{{userInfo.myself}}</rich-text>
+        <!-- <h2>签名</h2> -->
+        <rich-text class="myself-text">{{userInfo.userSign}}</rich-text>
       </view>
   </view>
 
-  <view class="separateView"></view>
-  <view class="menu-list">
-    <button class="addFriend" bindtap="addFriend">加为好友</button>
+   <view class="separateView"></view>
+    <view class="menu-list">
+    <!-- <button class="addFriend" bindtap="addFriend">加为好友</button> -->
     <button class="toTwitter" bindtap="toTwitter">查看帖子</button>
-  </view>
+  </view>   
 </view>

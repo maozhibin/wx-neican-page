@@ -3,8 +3,9 @@
     <block wx:for="{{friends}}" wx:key="key" wx:for-item="item">
         <view class="fi" data-uid="{{item.uid}}">
             <radio class="radio" value="{{item.uid}}"></radio>
-            <image src="{{item.avatarUrl}}" class="avatar"></image>
-            <view class="right"  bindtap="showUser">
+            <image src="{{item.userAvatar}}" class="avatar"></image>
+            <view class="right"  data-uid="{{item.uid}}" bindtap="showUser" >
+             <!-- <view class="nickName">{{item.uid}}</view> -->
               <view class="nickName">{{item.nickName}}</view>
               <view class="addDate">{{item.addDate}}</view>
             </view>
