@@ -7,30 +7,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-    twitterList:[],
+    twitterList: [{
+    }]
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this;
-    var globalData = getApp().globalData;
-    var url = globalData.baseServerUrl;
-    wx.request({
-      url: url + "/twitter/findMyTwitterList?uid=" + app.globalData.userInfo.uid,
-      method: 'POST',
-      data: {},
-      success: function (res) {
-        that.setData({
-          twitterList: res.data.object,
-        })
-        // app.globalData.userInfo = userInfo.data.object,
-        //   wx.switchTab({
-        //     url: 'my',
-        //   })
-        // wx.setStorageSync('rd3_success', userInfo.data.object); //存入本地以备后续使用
-      }
-    })
+      
   },
 
   /**
@@ -49,7 +33,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    // this.flush();
+    this.flush();
   },
 
   /**
@@ -64,25 +48,25 @@ Page({
       delta:1
     })
   },
-  // flush: function(){
-  //   var globalData = getApp().globalData;
-  //   var url = globalData.baseServerUrl + "?length=5";
-  //   console.info('>>>>loading twitterList<<:' + url);
-  //   var that = this;
+  flush: function(){
+    var globalData = getApp().globalData;
+    var url = globalData.baseServerUrl + "?length=5";
+    console.info('>>>>loading twitterList<<:' + url);
+    var that = this;
 
-  //   wx.request({
-  //     url: url,
-  //     data:{},
-  //     success: function (res) {
-  //       console.info('>>>> twitterList.size:' + res.data.length);
-  //       console.info('>>>> twitterList.header<<:' + res.header);
-  //       that.setData({
-  //         twitterList: res.data
-  //       });
-  //       wx.hideLoading();
-  //     }
-  //   })
-  // },
+    wx.request({
+      url: url,
+      data:{},
+      success: function (res) {
+        console.info('>>>> twitterList.size:' + res.data.length);
+        console.info('>>>> twitterList.header<<:' + res.header);
+        that.setData({
+          twitterList: res.data
+        });
+        wx.hideLoading();
+      }
+    })
+  },
   addTwitter: function () {
     //wx.showNavigationBarLoading() //在标题栏中显示加载
 
@@ -119,8 +103,8 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    // this.flush();
-    // console.info('>>>> page onPullDownRefresh..');
+    this.flush();
+    console.info('>>>> page onPullDownRefresh..');
   },
 
   /**

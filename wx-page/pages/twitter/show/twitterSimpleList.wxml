@@ -7,10 +7,10 @@
         <view class="twitterListTitle">{{item.title}}</view>
         <view class="twitterListButtom">
           <view class="reply">
-            <image src="../../../images/icon/info.png" style="width:30rpx;height:30rpx;" />{{item.countReply}}
+            <image src="../../../images/icon/info.png" style="width:30rpx;height:30rpx;" />{{item.replyCount}}
           </view>
           <view class="zan">
-            <image src="../../../images/icon/zan.png" style="width:30rpx;height:30rpx;" />{{item.countFabulous}}</view>
+            <image src="../../../images/icon/zan.png" style="width:30rpx;height:30rpx;" />{{item.zanCount}}</view>
         </view>
         <view class="edit" bindtap="editTwitter" data-model="edit" data-uid="10212"  data-id="1020000">编辑</view>
       </view>
